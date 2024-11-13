@@ -11,10 +11,6 @@ function App() {
 
   tg.expand();
 
-  tg.MainButton.text = "Отправить"; //изменяем текст кнопки 
-  tg.MainButton.textColor = "#FFF"; //изменяем цвет текста кнопки
-  tg.MainButton.color = "#16295D"; //изменяем цвет бэкграунда кнопки
-
   function send(){
     const name = document.querySelector('.name').value
     const contact = document.querySelector('.contact').value
@@ -31,24 +27,16 @@ function App() {
       done++
     }
 
-
-    // tg.sendData({
-    //   // chat_id: '1768792009',
-    //   text: `Имя: ${name}\nКонтакт: ${contact}\nВопрос: ${question}`
-    // })
-
-
     if(done == 3){
-      tg.MainButton.show()
+      tg.sendData(JSON.stringify({
+        // chat_id: '1768792009',
+        text: `Имя: ${name}\nКонтакт: ${contact}\nВопрос: ${question}`
+      }))
     } else {
       setOut("Все поля должны быть заполнены!")
     }
   }
 
-  Telegram.WebApp.onEvent('mainButtonClicked', function(){
-    tg.sendData("some string that we need to send"); 
-    //при клике на основную кнопку отправляем данные в строковом виде
-  });
 
 
   return (
@@ -59,7 +47,7 @@ function App() {
           <input type="text" placeholder='Имя' className='name'/>
           <input type="text" placeholder='Телефон/e-mail' className='contact'/>
           <textarea name="question" id="questionDesc" placeholder='Ваш вопрос' className='question' rows={4}></textarea>
-        <button type="submit" className='send' onClick={send}>Готово</button>
+        <button type="submit" className='send' onClick={send}>Отправить</button>
         </div>
     </div>
   )
