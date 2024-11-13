@@ -28,9 +28,14 @@ function App() {
     }
 
     if(done == 3){
+      // tg.sendData(JSON.stringify({
+      //   // chat_id: '1768792009',
+      //   text: `Имя: ${name}\nКонтакт: ${contact}\nВопрос: ${question}`
+      // }))
       tg.sendData(JSON.stringify({
-        // chat_id: '1768792009',
-        text: `Имя: ${name}\nКонтакт: ${contact}\nВопрос: ${question}`
+        name: name,
+        contact: contact,
+        question: question,
       }))
     } else {
       setOut("Все поля должны быть заполнены!")
