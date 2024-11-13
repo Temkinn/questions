@@ -1,0 +1,97 @@
+@font-face {
+  font-family: "Montserrat-Black";
+  src: url("./font/MontserratAlternates-Black.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("./font/MontserratAlternates-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("./font/MontserratAlternates-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: url("./font/MontserratAlternates-Medium.ttf");
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./assets/background.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-family: Montserrat-Black;
+  line-height: 1.1;
+  color: #fff;
+  width: 80%;
+}
+
+.out {
+  font-family: Montserrat-Bold;
+  color: #e63131;
+  text-align: center;
+}
+
+.fields {
+  width: 80%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3vh;
+  align-items: center;
+}
+
+.name,
+.contact {
+  outline:none;
+  width: 100%;
+  height: 40px;
+  background-color: #DFE4F0;
+  border-radius: 30px;
+  padding-left: 20px;
+  font-family: Montserrat-Regular;
+  font-size: 1.2em;
+  border: #DFE4F0 3px solid;
+  color: #000;
+}
+
+.question {
+  outline:none;
+  width: 100%;
+  background-color: #DFE4F0;
+  border-radius: 30px;
+  padding-left: 20px;
+  font-family: Montserrat-Regular;
+  font-size: 1.2em;
+  border: #DFE4F0 3px solid;
+  color: #000;
+}
+
+.name:focus,
+.contact:focus,
+.question:focus {
+  border: #FFD014 3px solid;
+}
+
+.send {
+  background-color:  #16295D;
+  color: #fff;
+  border: #FFD014 3px solid;
+  border-radius: 30px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: Montserrat-Bold;
+  font-size: 1.2em;
+  transition: background-color 0.25s;
+}
