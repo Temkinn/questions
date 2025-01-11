@@ -28,7 +28,7 @@ function App() {
     }
 
     if(done == 2){
-      tg.sendData(`question#${name} спрашивает: ${question}`)
+      tg.sendData(`questionᗰ${name} спрашивает: ${question}`)
     } else {
       setOut("Все поля должны быть заполнены!")
     }
